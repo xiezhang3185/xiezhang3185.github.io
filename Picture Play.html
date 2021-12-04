@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Picutrue Play</title>
+<body background="Pictures/bg5.jpeg">
+<script type="text/javascript">
+var picArr=new Array("Pictures/1.jpeg","Pictures/2.jpeg","Pictures/3.png");
+var index=0;
+function next(){
+index++;
+if(index==picArr.length){
+index=0;
+}
+document.getElementById("imgp").src=picArr[index];
+}
+function previous(){
+index--;
+if(index<0){
+index=picArr.length-1;
+}
+document.getElementById("imgp").src=picArr[index];
+}
+</script>
+</body>
+<img src="1.jpg" id="imgp" />
+</br>
+<input type="button" value="next" onclick="next()"/>
+<input type="button" value="last" onclick="previous()" />
+<style type="text/css">
+body,td,th {
+	font-size: 40px;
+	color: #F9F9F9;
+}
+</style>
+</head>
+
+<body>
+<div align="center">Pictures and Videos</div>
+</body>
+</html>
